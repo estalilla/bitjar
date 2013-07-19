@@ -3,8 +3,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bitjar - Crowdfunding with Bitcoins</title>
+    <title>Bitjar - Tip with Bitcoins</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./lib/font-awesome.min.css">
+	<link rel="stylesheet" href="./lib/bootstrap.min.css">
+	<script src="./lib/bootstrap.js"></script>
+	<script src="./lib/jquery.js"></script>
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
@@ -18,7 +22,7 @@
       /* Large desktop */
       @media (min-width: 980px) { 
         body {
-         padding-top: 60px;
+         padding-top: 30px;
         }
        .linediv-l {
          border-right: 1px white solid;
@@ -40,7 +44,9 @@
          border-top: 1px white solid;
        }
       }
-
+	  #header {
+		padding-top: 5%;
+	  }
       /* All form factors */
 
       /* Main body and headings */
@@ -134,14 +140,14 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1 id="header">Bitjar</h1>
         </div>
       </div> 
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
+          <p class="lead">Personal Finance Advice for Bitcoins</p>
         </div>
       </div>
       <div class="row-fluid pitch">
@@ -158,17 +164,17 @@
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
                 <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
+                <h3>10</h3> <p>backers</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
+                  <h3>$10</h3> <p>of $10,000</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
+                <h3>365</h3> <p>days left</p>
                 </div>
               </div>
             </div>
@@ -204,37 +210,30 @@
           <img class="img-polaroid" src="http://placehold.it/480x300">
         </div>
         <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+          <h4>"Making sense out out of dollars."</h4><p> In each of our lives, finance plays a vital role. 
+			We deal with it everyday. For some, it's an after-thought. 
+			For many, it's a cause for stress, uncertainty, and even fights with loved ones. 
+			Money certainly does not determine our life satisfaction, but it help reduce our anxiety from exogenous factors, such as hospital bi			lls, mortgage payments, and the rising price of literally everything. 
+			Despite its importance, we never receive formal training on how to deal with money. 		
+			There are no mandatory classes for it in elementary school through college, yet everyone has to manage their finances for most of th			eir life. 
+			<br><br>The vast majority of people do not major in finance nor are able to afford a personal financial advisor. I believe financial advice should be freely available. 
+			Everyone should have access to the same information and advice, regardless of their financial status. 
+			Thus, Bitjar was born... 
+		  </p>
         </div>
       </div>
 
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+         <h4>"Will work for Bitcoins"</h4>
+		 <p>Bitjar is a personal finance advice service. I offer general financial advice (the type you can find readily available online, 			but with the convenience of me telling it to you), along with some personalize suggestions in exchange for bitcoin tips. You choose how much or how little to give, if anything at all.
+			We can get as granular with your finances or keep everything in generic terms, your choice. The catch? Well, for starters, 
+			I'm not a financial advisor. I simply majored in finance in college and lead several projects to teach personal finance to students in local schools. I believe in democratizing information, especially for something so universal as money.
+			<br><br> As a general rule you should take <em>ALL</em> financial advice with a grain of salt and healthy dose of skepticism.
+			And this is no exception. I do, however, want to see more people take control of their finances, not fall victim to scams, and 
+			to make the most of the time they have. If you find value in my advice and enjoyed Bitjar's service, feel free to leave me a bitcoin 			tip. Normal currency (dollars, euros, yen, etc.) are also accepted if you don't want to relinquish or have any bitcoins! Most 
+			importantly, I hope you gain a little bit of knowledge to help you take proactive steps in managing your future. 
+		  </p>
         </div>
         <div class="span5 asset">
           <img class="img-polaroid" src="http://placehold.it/480x300">
@@ -252,28 +251,52 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
-                  </a>
+                	Do I have to pay?  
+				</a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Frequently Asked Question.
-                  </div>
+                  Not really. I can't force everyone to pay and I understand that some may have circumstances that make things difficult.
+				  I only ask if you got something out of Bitjar and are financially able to, that you leave a tip (the amount is totally up to you). 
+				  Think of it as 'paying it forward' for others like you and it also helps me continue to offer this service (I also work full-time, so anything I receive from this site goes directly into making it better for you all). If you can't tip, but want to help out some other way, spread the word! Or better yet, ask me how you can create some content or help others.
+				  </div>
                 </div>
               </div>
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
+                    What guarantees do you offer?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    A question which is commonly asked by users.
+                    None. Take it any and all advice at your own discretion. No one can predict the future. 
+					The best I can do is provide some time-tested heuristics and common sense advice. 
+					Everything I tell you is freely available on the internet. 
+					I'm only seeking to make things convenient for people who don't have a proclivity or interest in learning about these things.
                   </div>
                 </div>
               </div>
+         <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseTwo">
+                    How much time can you devote to me?
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+					If the site gains traction, I potentially will be very busy answering questions. 
+					One person doesn't exactly scale very well. 
+					For now, I plan to devote as much time as you want, provided that I'm not neglecting others. 
+					I will be very upfront with how much time I can provide for personalized advice (I'll let you know in our first correspondence). 
+					I plan to upload resources for you to learn at your own pace. 
+
+                 </div>
+                </div>
+              </div>
+      
             </div>
           </div>
 
