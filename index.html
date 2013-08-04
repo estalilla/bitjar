@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bitjar - Tip with Bitcoins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./lib/font-awesome.min.css">
+	<link rel="stylesheet" href="./lib/bootstrap.min.css">
+	<script src="./lib/bootstrap.js"></script>
+	<script src="./lib/jquery.js"></script>
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+          rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+      /* Large desktop */
+      @media (min-width: 980px) { 
+        body {
+         padding-top: 30px;
+        }
+       .linediv-l {
+         border-right: 1px white solid;
+        }
+       .linediv-r {
+         border-left: 1px white solid;
+       }
+      }
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) { 
+       .copy {
+         padding: 2.5% 10%;
+       }
+       .linediv-l {
+         border-bottom: 1px white solid;
+       }
+       .linediv-r {
+         border-top: 1px white solid;
+       }
+      }
+	  #header {
+		padding-top: 5%;
+	  }
+      /* All form factors */
+
+      /* Main body and headings */
+      body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+      p.lead {
+        padding-top: 1.5%;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      /* Video pitch and Action */
+      .pitch {
+        padding: 2.5% 0%;
+      }
+      .order {
+        padding: 2% 0%;
+      }
+      .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align: center;
+      }
+      .statistics h3, .statistics p {
+        color: white;
+      }
+
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar"
+                  data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Bitjar</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1 id="header">Bitjar</h1>
+        </div>
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">Personal Finance Advice for Bitcoins</p>
+        </div>
+      </div>
+      <div class="row-fluid pitch">
+        <div class="span5 offset1 video">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+        </div>
+
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+        <div class="span5 actions">
+          <div class="span8 offset2">
+            <div class="statistics">
+              <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
+                <div class="linediv-l">
+                <h3>10</h3> <p>backers</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$10</h3> <p>of $10,000</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                <h3>365</h3> <p>days left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span10 offset1">
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+            <div class="thermometer progress active">
+              <div class="bar bar-success" style="width: 60%;"></div>
+              <div class="bar bar-warning" style="width: 40%;"></div>
+            </div>
+          </div>
+          <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <button class="btn btn-success btn-large">Preorder</button>
+          </div>
+          <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+      <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x500">
+        </div>
+        <div class="span5 copy">
+          <h4>"Making sense out out of dollars."</h4><p> In each of our lives, finance plays a vital role. 
+			We deal with it everyday. For some, it's an after-thought. 
+			For many, it's a cause for stress, uncertainty, and even fights with loved ones. 
+			Money certainly does not determine our life satisfaction, but it help reduce our anxiety from exogenous factors, such as hospital bills, mortgage payments, and the rising price of literally everything. 
+			Despite its importance, we never receive formal training on how to deal with money. 		
+			There are no mandatory classes for it in elementary school through college, yet everyone has to manage their finances for amost their entire life. 
+			<br><br>The vast majority of people do not study finance nor are they able to afford a personal financial advisor. This puts some of the most vulnerable people, such as students, young professionals, and families, at a disadvantage. I believe financial advice should be freely available. 
+			We are fortunate enough to live in the age of the internet, where almost anything you could think of is at your fingertips. But many people don't know where to start or need some general guidance. 
+			Thus, Bitjar was born... 
+		  </p>
+        </div>
+      </div>
+
+      <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+         <h4>"Will work for Bitcoins"</h4>
+		 <p>Bitjar is a personal finance advice service. I offer general financial advice (the type you can find readily available online, 			but with the convenience of me telling it to you), along with some personalize suggestions in exchange for bitcoin tips. You choose how much or how little to give, if anything at all.
+			We can get as granular with your finances or keep everything in generic terms, your choice.
+	  	<br><br> As a general rule, I suggest you take <em>ALL</em> financial advice with a grain of salt and healthy dose of skepticism.
+			And this is no exception. I do, however, want to see more people take control of their finances, not fall victim to scams, and 
+			to make the most of the time they have. If you find value in my advice and enjoyed Bitjar's service, feel free to leave me a bitcoin 			tip. Normal currency (dollars, euros, yen, etc.) are also accepted if you don't want to relinquish or have any bitcoins. Most 
+			importantly, I hope you gain a little bit of knowledge to help you take proactive steps in managing your future. 
+		  </p>
+        </div>
+        <div class="span5 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x500">
+        </div>
+      </div>
+
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
+          <div class="span10 offset1">
+            <h3>FAQ</h3>
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseOne">
+                	Do I have to pay?  
+				</a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                  Not really. I can't force everyone to pay and I understand that some may have circumstances that make things difficult.
+				  I only ask if you got something out of Bitjar and are financially able to, that you leave a tip (the amount is totally up to you). 
+				  Think of it as 'paying it forward' for others like you and it also helps me continue to offer this service (I also work full-time, so anything I receive from this site goes directly into making it better for you all). If you can't tip, but want to help out some other way, spread the word! Or better yet, ask me how you can create some content or help others.
+				  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseTwo">
+                    What guarantees do you offer?
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    None. Take it any and all advice at your own discretion. Remember, one size does not fit all and more importantly, no one can predict the future. 
+					The best I can do is provide some time-tested heuristics and common sense advice. 
+					Everything I tell you is freely available on the internet. 
+					I'm only seeking to make things convenient for people who don't have a proclivity or interest in learning about these things.
+                  </div>
+                </div>
+              </div>
+         <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseThree">
+                    How much time can you devote to me?
+                  </a>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse">
+                  <div class="accordion-inner">
+				Expect one upfront discussion and a few email correspondences. I will try to be as timely as possible answering questions, but I also work a full-time job and hack away on other projects. If the site gains traction, I potentially will be very busy answering questions. 
+					One person doesn't exactly scale very well. 
+					For now, I plan to devote as much time as you want, provided that I'm not neglecting others. 
+					I will try to be upfront with how much time I can provide for personalized advice, but please allow for delays. 
+					I plan to upload resources for you to learn at your own pace. 
+
+                 </div>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+
+      </div>
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
