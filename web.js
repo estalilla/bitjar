@@ -27,14 +27,14 @@ app.get('/', function(request, response) {
 
 
 // Render example.com/orders
-app.get('/orders', function(request, response) {
+app.get('/tips', function(request, response) {
   global.db.Order.findAll().success(function(orders) {
     var orders_json = [];
     orders.forEach(function(order) {
       orders_json.push({id: order.coinbase_id, amount: order.amount, time: order.time});
     });
     // Uses views/orders.ejs
-    response.render("orders", {orders: orders_json});
+    response.render("tips", {orders: orders_json});
   }).error(function(err) {
     console.log(err);
     response.send("error retrieving orders");
@@ -60,7 +60,7 @@ app.get('/refresh_orders', function(request, response) {
             response.send("error adding orders");
           } else {
             // orders added successfully
-            response.redirect("/orders");
+            response.redirect("/tips");
           }
         });
       } catch (error) {
