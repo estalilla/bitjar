@@ -20,8 +20,8 @@ app.get('/', function(request, response) {
 
 // Render budget.html (note trailing slash): example.com/
 app.get('/', function(request, response) {
-  var data = fs.readFileSync('budget.html').toString();
-  response.send(data);
+  var data2 = fs.readFileSync('budget.html').toString();
+  response.send(data2);
 });
 
 
