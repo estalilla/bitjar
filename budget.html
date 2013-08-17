@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Bitjar - Tip with Bitcoins</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bitjar.css">
 	<link rel="stylesheet" href="./lib/font-awesome.min.css">
 	<link rel="stylesheet" href="./lib/bootstrap.min.css">
 	<script src="./lib/bootstrap.js"></script>
@@ -15,104 +16,11 @@
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!--	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-    <style type="text/css">
-
-      /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 30px;
-        }
-       .linediv-l {
-         border-right: 1px white solid;
-        }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
-      }
-
-      /* Landscape phones and down */
-      @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-      }
-	  #header {
-		padding-top: 5%;
-	  }
-      /* All form factors */
-
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
-
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
-	  
-	  /* Resources */
-	  #tab-header {
-		list-style: none;
-	  }
-
-    </style>
+  
   </head>
   <body>
 
@@ -175,23 +83,96 @@
       <div class="row-fluid pitch">
 
 	    <div id="tabs">
-		  <ul id="tab-header">
-			<li><a href="#tab-1">Intro</a></li>
-			<li><a href="#tab-2">Examples</a></li>
-			<li><a href="#tab-3">myBudget</a></li>
+		  <ul class="nav nav-tabs tabHeader">
+			<li class="active"><a href="#tab-1" data-toggle="tab">Intro</a></li>
+			<li><a href="#tab-2" data-toggle="tab">Examples</a></li>
+			<li><a href="#tab-3" data-toggle="tab">myBudget</a></li>
 		  </ul>
 		
-		<div id="tab-1">
-		  <p>This is tab #1
-		</div>
+		  <div class="tab-content">
+			
+			<!--Tab #1 Intro -->	
+		    <div id="tab-1" class="tab-pane active">
 
-		<div id="tab-2">
-		  <p>This is tab #2
-		</div>
-		
-		<div id="tab-3">
-		  <p>This is tab #3
-		</div>
+			  <em class="dbl quote">'Failing to plan is planning to fail' - Proverb </em>
+
+			  <p class="dbl">The first step in taking control of your finances is to assess just what exactly your finances are. In other, create a budget. We'll go into detail and construct a budget for you shortly, but first let's go over some basics.
+			  <p class="dbl"><b>Necessary vs. Discretionary</b> (or Need vs. Want)
+
+			  <img class="img-polaroid" src="http://placehold.it/200x180"> 
+			  <p>Certain expenses are unavoidable and can even be good for you. For example, you need food. Food costs money (unless you are a farmer or some sort of hunter/gatherer) and buying good food can have positive effects on your health. Other basic needs typically require money as well. The largest tend to be food and shelter (i.e. rent). A few other big ones include clothing, transportation, and trips to the doctor.
+
+			  <p>Then there is the stuff you want, but can still exist without. These are known as discretionary expenses because we can decide to buy or forego them at any point. Examples such as designer clothes, new cars, or even your iPhone are luxuries (although some may argue that their smartphone is practically a vital appendage at this point). These are not bad things to purchases, but it's important that you first make sure you can afford to cover your basic needs.  
+			</div>
+
+			
+			<!--Tab #2 Examples -->
+			<div id="tab-2" class="tab-pane">
+			  <em class="dbl quote">'Something poignant' - ME</em>
+
+			  <p class="dbl">If you work in the United States you will be paying a portion of your monthly paycheck to the government in the form of several types of taxes. Federal taxes are generally the largest depending your total income, followed by social security and state taxes (for states that have income taxes). Finally, Medicare and other health insurance payments may be taken out of your paycheck before you even see any of the money.
+
+			  <p class="dbl">Let's look at a typical household budget and then we can start looking at specific scenarios to help you tailor your own budget. 
+			</div>
+			
+			<!-- Tab 3: myBudget -->
+			<div id="tab-3" class="tab-pane">
+			  <p>Enough talk, let's create a budget of your own! 
+				 Input some basic information to see how your spending stacks up against others. 
+				 Play around with the numbers to come up with ideas on places you can save money.
+
+			  <form id="inputs_form" action="#" method="post">
+				<label for="income">Input your monthly take home pay</label>
+				<input type="text" id="monthly_income" name="monthly_income" placeholder="Monthly Income">
+				<span class="input_error">Must be a number!</span>
+				
+				<label for="food">How much do you spend on food each month?</label>
+				<input type="text" id="food_expense" name="food_expense" placeholder="Weekly food expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="housing">How much do you spend on rent or mortgage payments per month?</label>
+				<input type="text" id="housing_expense" name="housing_expense" placeholder="Monthly housing expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="housing">and utilities, cable, and internet per month?</label>
+				<input type="text" id="utilities_expense" name="utilities_expense" placeholder="Monthly utilities, cable, 
+																								and internet expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="transportation">How much do you pay for transportation per month?
+											(<em>ex. car payments, gas, subway fare, bus tickets</em>)</label>
+				<input type="text" id="transportation_expense" name="transportation_expense" placeholder="Monthly transportation expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="housing">How much do you spend on shopping? (not related to any of the above topics)</label>
+				<input type="text" id="shopping_expense" name="shopping_expense" placeholder="Monthly shopping expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="housing">How much do you spend on medical expenses?</label>
+				<input type="text" id="medical_expense" name="medical_expense" placeholder="Monthly medical expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="housing">How much do you spend on entertainment or on going out per month?</label>
+				<input type="text" id="entertainment_expense" name="entertainment_expense" placeholder="Monthly entertainment expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="debt">How much do you spend paying off debt each month? <em>(Don't include anything already mentioned, such as 
+																						mortgage or car payments Some valid examples 
+																						are credit cards or student loans)</em> </label>
+				<input type="text" id="debt_expense" name="debt_expense" placeholder="Monthly debt expense">
+				<span class="input_error">Must be a number!</span>
+
+				<label for="miscellaneous">Include any miscellaneous expenses not covered above here</label>
+				<input type="text" id="miscellaneous_expense" name="miscellaneous_expense" placeholder="Monthly miscellaneous expenses">
+				<span class="input_error">Must be a number!</span>
+
+
+
+
+
+			</div>
+
+		  </div>
 
 		</div> <!-- close "tabs" -->
       </div> <!-- close "row-fluid" -->
@@ -234,14 +215,15 @@
 			})();
 
 		  </script>
-		
+	
+<!--	
 		  <script>
 			$(document).ready(function () {
 			  $(function() {
 				$("#tabs").tabs();
 			  });
 			});
-		  </script>
+		  </script> -->
 
 
   </body>
