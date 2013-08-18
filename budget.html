@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +18,8 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-  
+	<link href="/css/bitjar.css" rel="stylesheet" type="text/css">  
+
   </head>
   <body>
 
@@ -39,20 +38,26 @@
           <a class="brand" href="#">Bitjar</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-			  <li class="dropdown"><a id="drop1" class="dropdown-toggle" data-toggle="dropdown" role="button" href="#resources">Resources <b class="caret"></b></a>
-				<ul class="dropdown-menu" role="menu">
-				  <li role="presentation">
-					<a tabindex="-1" role="menuitem">Budgeting</a>
+              <li class="active"><a href="/">Home</a></li>
+			  <li class="dropdown">
+				  <a id="drop1" class="dropdown-toggle" data-toggle="dropdown" role="button" href="#resources">Resources <b class="caret"></b></a>
+				  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+				  <li class="dropdown-submenu">
+					<a class="sub_menu"tabindex="-1" role="button" class="dropdown-toggle" data-toggle="dropdown" href="#basic">Basic</b></a>
+					  <ul class="dropdown-menu" role="menu"> 
+						  <li role="presentation"><a href="/budget" tabindex="-1" role="menuitem">Budgeting</a></li>
+						  <li role="presentation"><a href="/retire" tabindex="-1" role="menuitem">Retirement</a></li>
+						  <li role="presentation"><a href="/invest" tabindex="-1" role="menuitem">Investing</a></li>
+					  </ul>
+					</li>
+				  <li class="dropdown-submenu" role="presentation">
+					<a class="sub_menu" tabindex="-1" role="menuitem">Intermediate</a>
 				  </li>
-				  <li role="presentation">
-					<a tabindex="-1" role="menuitem">Retirement</a>
+				  <li class="dropdown-submenu" role="presentation">
+					<a class="sub_menu" tabindex="-1" role="menuitem">Advanced</a>
 				  </li>
-				  <li role="presentation">
-					<a tabindex="-1" role="menuitem">Investing</a>
-				  </li>
-				</li> 
-			    </ul>    
+				</ul>
+			  </li>         
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
 	    </ul>
