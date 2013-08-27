@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 8080);
 
 // Serve static assets
 app.use("/css", express.static(__dirname + '/css'));
-
+app.use("/js", express.static(__dirname + '/js'));
 
 
 // Render homepage (note trailing slash): example.com/
@@ -28,6 +28,13 @@ app.get('/budget', function(request, response) {
   var data2 = fs.readFileSync('budget.html').toString();
   response.send(data2);
 });
+
+// Render presentation.html (note trailing slash): example.com/
+app.get('/presentation', function(request, response) {
+  var data2 = fs.readFileSync('presentation.html').toString();
+  response.send(data2);
+});
+
 
 
 
