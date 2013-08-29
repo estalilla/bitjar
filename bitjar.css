@@ -86,3 +86,12 @@ p {
   color: #ccccff;
 }
 
+/* Budget */
+#tab-3 {
+  position: relative;
+  z-index: 1;
+  float: left;
+  border: 10px solid red;
+  background-color: red; 
+}
+

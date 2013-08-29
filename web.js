@@ -15,7 +15,7 @@ app.set('port', process.env.PORT || 8080);
 // Serve static assets
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/js", express.static(__dirname + '/js'));
-
+app.use("/lib", express.static(__dirname + '/lib'));
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {

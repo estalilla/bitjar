@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>Bitjar - Tip with Bitcoins</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./bitjar.css">
+<!--	<link rel="stylesheet" href="./bitjar.css"> -->
 	<link rel="stylesheet" href="./lib/font-awesome.min.css">
 	<link rel="stylesheet" href="./lib/bootstrap.min.css">
 	<script src="./lib/bootstrap.js"></script>
 	<script src="./lib/jquery.js"></script>
+	<script src="./js/bitjar.js"></script>
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
@@ -99,15 +100,15 @@
 
 	    <div id="tabs">
 		  <ul class="nav nav-tabs tabHeader">
-			<li class="active"><a href="#tab-1" data-toggle="tab">Intro</a></li>
-			<li><a href="#tab-2" data-toggle="tab">Examples</a></li>
-			<li><a href="#tab-3" data-toggle="tab">myBudget</a></li>
+			<li class="active"><a href="#intro" data-toggle="tab">Intro</a></li>
+			<li><a href="#examples" data-toggle="tab">Examples</a></li>
+			<li><a href="#myBudget" data-toggle="tab">myBudget</a></li>
 		  </ul>
 		
 		  <div class="tab-content">
 			
 			<!--Tab #1 Intro -->	
-		    <div id="tab-1" class="tab-pane active">
+		    <div id="intro" class="tab-pane active">
 
 			  <em class="dbl quote">'Never spend your money before you have earned it' - Thomas Jefferson </em>
 
@@ -132,7 +133,7 @@
 
 			
 			<!--Tab #2 Examples -->
-			<div id="tab-2" class="tab-pane">
+			<div id="examples" class="tab-pane">
 			  <em class="dbl quote">'Something poignant' - ME</em>
 
 			  <p class="dbl">If you work in the United States you will be paying a portion of your monthly paycheck to the government in the form of several types of taxes. Federal taxes are generally the largest depending your total income, followed by social security and state taxes (for states that have income taxes). Finally, Medicare and other health insurance payments may be taken out of your paycheck before you even see any of the money.
@@ -141,7 +142,7 @@
 			</div>
 			
 			<!-- Tab 3: myBudget -->
-			<div id="tab-3" class="tab-pane">
+			<div id="myBudget" class="tab-pane">
 			  <p>Enough talk, let's create a budget of your own! 
 				 Input some basic information to see how your spending stacks up against others. 
 				 Play around with the numbers to come up with ideas on places you can save money.
@@ -159,7 +160,7 @@
 				<input type="text" id="housing_expense" name="housing_expense" placeholder="Monthly housing expense">
 				<span class="input_error">Must be a number!</span>
 
-				<label for="housing">and utilities, cable, and internet per month?</label>
+				<label for="utilities">Utilities, cable, and internet expenses per month?</label>
 				<input type="text" id="utilities_expense" name="utilities_expense" placeholder="Monthly utilities, cable, 
 																								and internet expense">
 				<span class="input_error">Must be a number!</span>
@@ -169,15 +170,15 @@
 				<input type="text" id="transportation_expense" name="transportation_expense" placeholder="Monthly transportation expense">
 				<span class="input_error">Must be a number!</span>
 
-				<label for="housing">How much do you spend on shopping? (not related to any of the above topics)</label>
+				<label for="shopping">How much do you spend on shopping? (not related to any of the above topics)</label>
 				<input type="text" id="shopping_expense" name="shopping_expense" placeholder="Monthly shopping expense">
 				<span class="input_error">Must be a number!</span>
 
-				<label for="housing">How much do you spend on medical expenses?</label>
+				<label for="medical">How much do you spend on medical expenses?</label>
 				<input type="text" id="medical_expense" name="medical_expense" placeholder="Monthly medical expense">
 				<span class="input_error">Must be a number!</span>
 
-				<label for="housing">How much do you spend on entertainment or on going out per month?</label>
+				<label for="entertainment">How much do you spend on entertainment or on going out per month?</label>
 				<input type="text" id="entertainment_expense" name="entertainment_expense" placeholder="Monthly entertainment expense">
 				<span class="input_error">Must be a number!</span>
 
@@ -190,8 +191,9 @@
 				<label for="miscellaneous">Include any miscellaneous expenses not covered above here</label>
 				<input type="text" id="miscellaneous_expense" name="miscellaneous_expense" placeholder="Monthly miscellaneous expenses">
 				<span class="input_error">Must be a number!</span>
-
-
+				<br><br>
+				<input type="submit" value="Update"> <button id="clear_all">Clear</button>
+			  </form>
 
 
 
