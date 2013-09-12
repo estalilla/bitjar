@@ -4,11 +4,8 @@
     <meta charset="utf-8">
     <title>Bitjar - Tip with Bitcoins</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--	<link rel="stylesheet" href="./bitjar.css"> -->
-	<link rel="stylesheet" href="./lib/font-awesome.min.css">
-	<link rel="stylesheet" href="./lib/bootstrap.min.css">
-	<script src="./lib/bootstrap.js"></script>
-	<script src="./lib/jquery.js"></script>
+<!--	<script src="./lib/jquery.js"></script> -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="./js/bitjar.js"></script>
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -20,7 +17,9 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
 	<link href="/css/bitjar.css" rel="stylesheet" type="text/css">  
-
+	<!--[if IE]>
+	<script src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
   </head>
   <body>
 
@@ -143,58 +142,105 @@
 			
 			<!-- Tab 3: myBudget -->
 			<div id="myBudget" class="tab-pane">
-			  <p>Enough talk, let's create a budget of your own! 
-				 Input some basic information to see how your spending stacks up against others. 
-				 Play around with the numbers to come up with ideas on places you can save money.
+			  <div id="myBudget_input">
+				<p>Enough talk, let's create a budget of your own! 
+				   Input some basic information to see how your spending stacks up against others. 
+				   Play around with the numbers to come up with ideas on places you can save money.
 
-			  <form id="inputs_form" action="#" method="post">
-				<label for="income">Input your monthly take home pay</label>
-				<input type="text" id="monthly_income" name="monthly_income" placeholder="Monthly Income">
-				<span class="input_error">Must be a number!</span>
+				<form id="inputs_form" action="#" method="post">
+				  <label for="income">Input your monthly take home pay</label>
+				  <input type="text" id="monthly_income" name="monthly_income" placeholder="Monthly Income">
+				  <span class="input_error">Must be a number!</span>
+				  
+				  <label for="food">How much do you spend on food each month?</label>
+				  <input type="text" id="food_expense" name="food_expense" placeholder="Weekly food expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="housing">How much do you spend on rent or mortgage payments per month?</label>
+				  <input type="text" id="housing_expense" name="housing_expense" placeholder="Monthly housing expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="utilities">Utilities, cable, and internet expenses per month?</label>
+				  <input type="text" id="utilities_expense" name="utilities_expense" placeholder="Monthly utilities, cable, 
+																								  and internet expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="transportation">How much do you pay for transportation per month?
+											  (<em>ex. car payments, gas, subway fare, bus tickets</em>)</label>
+				  <input type="text" id="transportation_expense" name="transportation_expense" placeholder="Monthly transportation expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="shopping">How much do you spend on shopping? (not related to any of the above topics)</label>
+				  <input type="text" id="shopping_expense" name="shopping_expense" placeholder="Monthly shopping expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="medical">How much do you spend on medical expenses?</label>
+				  <input type="text" id="medical_expense" name="medical_expense" placeholder="Monthly medical expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="entertainment">How much do you spend on entertainment or on going out per month?</label>
+				  <input type="text" id="entertainment_expense" name="entertainment_expense" placeholder="Monthly entertainment expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="debt">How much do you spend paying off debt each month? <em>(Don't include anything already mentioned, such as 
+																						  mortgage or car payments Some valid examples 
+																						  are credit cards or student loans)</em> </label>
+				  <input type="text" id="debt_expense" name="debt_expense" placeholder="Monthly debt expense">
+				  <span class="input_error">Must be a number!</span>
+
+				  <label for="miscellaneous">Include any miscellaneous expenses not covered above here</label>
+				  <input type="text" id="miscellaneous_expense" name="miscellaneous_expense" placeholder="Monthly miscellaneous expenses">
+				  <span class="input_error">Must be a number!</span>
+				  <br><br>
+				  <input type="submit" value="Update"> <button id="clear_all">Clear</button>
+				</form>
+			  </div> <!-- Close myBudget_input -->
+
+			  <div id="pieChart">
+				<p> Input your budget and see how it stacks up
 				
-				<label for="food">How much do you spend on food each month?</label>
-				<input type="text" id="food_expense" name="food_expense" placeholder="Weekly food expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="housing">How much do you spend on rent or mortgage payments per month?</label>
-				<input type="text" id="housing_expense" name="housing_expense" placeholder="Monthly housing expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="utilities">Utilities, cable, and internet expenses per month?</label>
-				<input type="text" id="utilities_expense" name="utilities_expense" placeholder="Monthly utilities, cable, 
-																								and internet expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="transportation">How much do you pay for transportation per month?
-											(<em>ex. car payments, gas, subway fare, bus tickets</em>)</label>
-				<input type="text" id="transportation_expense" name="transportation_expense" placeholder="Monthly transportation expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="shopping">How much do you spend on shopping? (not related to any of the above topics)</label>
-				<input type="text" id="shopping_expense" name="shopping_expense" placeholder="Monthly shopping expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="medical">How much do you spend on medical expenses?</label>
-				<input type="text" id="medical_expense" name="medical_expense" placeholder="Monthly medical expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="entertainment">How much do you spend on entertainment or on going out per month?</label>
-				<input type="text" id="entertainment_expense" name="entertainment_expense" placeholder="Monthly entertainment expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="debt">How much do you spend paying off debt each month? <em>(Don't include anything already mentioned, such as 
-																						mortgage or car payments Some valid examples 
-																						are credit cards or student loans)</em> </label>
-				<input type="text" id="debt_expense" name="debt_expense" placeholder="Monthly debt expense">
-				<span class="input_error">Must be a number!</span>
-
-				<label for="miscellaneous">Include any miscellaneous expenses not covered above here</label>
-				<input type="text" id="miscellaneous_expense" name="miscellaneous_expense" placeholder="Monthly miscellaneous expenses">
-				<span class="input_error">Must be a number!</span>
-				<br><br>
-				<input type="submit" value="Update"> <button id="clear_all">Clear</button>
-			  </form>
-
+				<canvas id="chart"></canvas>
+				<table id="chartData">
+				  <tr>
+					<th>myBudget</th> <th>Monthly ($)</th>					
+				  </tr>
+<!--				  <tr>
+					<td style="color: #0DA068">Food</td>
+				  </tr>
+				  <tr>
+					<td style="color: #0DA068">Housing</td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Utilities</td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Transportation</td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Shopping</td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Medical</td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Entertainment</td>
+					<td></td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Debt</td>
+					<td></td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Miscellaneous</td>
+					<td></td>
+				  </tr>
+    			  <tr>
+					<td style="color: #0DA068">Left Over</td>
+				  </tr>
+-->
+		      </table>
+ 
+			  </div> <!-- Close pieChart -->
 
 
 			</div>
