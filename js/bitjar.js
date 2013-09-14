@@ -27,27 +27,30 @@ $(document).ready(function() {
 	  });
 	});
 
+	var chartData = $('#chartData');
 	var budget = {
-		income : '',
-		food : '',
-		housing : '',
-		utilities : '',
-		transportation : '',
-		shopping : '',
-		medical : '',
-		entertainment : '',
-		debt : '',
-		miscellaneous : ''
+		Income : '',
+		Food : '',
+		Housing : '',
+		Utilities : '',
+		Transportation : '',
+		Shopping : '',
+		Medical : '',
+		Entertainment : '',
+		Debt : '',
+		Miscellaneous : ''
 	};
 
 	$('.input_error').hide();
 
 	//Display list function
-    function addTableData(){
+    function addTableData(e){
+	  chartData.html('');
+	  chartData.append('<tr> <th>myBudget</th> <th>Monthly ($)</th>  </tr>');
 	  $.each(budget, function(prop, value) { 
 		if(parseInt(value) > 0){
 		  console.log(prop + '='+ value);
-		  $('#chartData').append(
+		  chartData.append(
 			'<tr> <td>'+prop+'</td> <td>'+value+'</td> </tr>'
 		  )			    
 		} 
@@ -57,18 +60,30 @@ $(document).ready(function() {
 	$('#inputs_form').submit(function(e){
 	  e.preventDefault();
 	  //get values from user inputs
-	  budget.income = $('#monthly_income').val();
-	  budget.food = $('#food_expense').val();
-	  budget.housing = $('#housing_expense').val();
-	  budget.utilities = $('#utilities_expense').val();
-	  budget.transportation = $('#transportation_expense').val();
-	  budget.shopping = $('#shopping_expense').val();
-	  budget.medical = $('#medical_expense').val();
-	  budget.entertainment = $('entertainment_expense').val();
-	  budget.debt = $('#debt_expense').val();
-	  budget.miscellaneous = $('#miscellaneous_expense').val();
+	  budget.Income = $('#monthly_income').val();
+	  budget.Food = $('#food_expense').val();
+	  budget.Housing = $('#housing_expense').val();
+	  budget.Utilities = $('#utilities_expense').val();
+	  budget.Transportation = $('#transportation_expense').val();
+	  budget.Shopping = $('#shopping_expense').val();
+	  budget.Medical = $('#medical_expense').val();
+	  budget.Entertainment = $('#entertainment_expense').val();
+	  budget.Debt = $('#debt_expense').val();
+	  budget.Miscellaneous = $('#miscellaneous_expense').val();
+
+		var sum = 0;
+		$.each(budget, function(prop, value){
+		  if (parseInt(value) > 0) {
+		    sum += parseInt(value);
+		  }
+		});
+		var savings = parseInt(budget.Income) - (sum - parseInt(budget.Income));
+		console.log(savings);  
 
 	  addTableData();
+	  if (savings > 0) {
+		chartData.append('<tr> <td>Savings</td> <td>'+savings+'</td>');
+	  }
 
 /*	  $.each(budget, function(prop, value) { 
 		if(parseInt(value) > 0){
@@ -81,14 +96,11 @@ $(document).ready(function() {
 */		
 	}); //Close submit function
 
-	$('#clear_all').click(function(e){
-	  console.log('Clear');
-	  $.each(budget, function(key, value){
-		value = '';
-		console.log(value);
+	$('#clear_all').click(function(){
+	 $('#inputs_form').each(function(){
+		this.reset();
 	  });
-	  addTableData();
-	  e.preventDefault();
+	  chartData.html('');
 	});
 
 

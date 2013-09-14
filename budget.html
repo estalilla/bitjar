@@ -192,8 +192,8 @@
 				  <input type="text" id="miscellaneous_expense" name="miscellaneous_expense" placeholder="Monthly miscellaneous expenses">
 				  <span class="input_error">Must be a number!</span>
 				  <br><br>
-				  <input type="submit" value="Update"> <button id="clear_all">Clear</button>
-				</form>
+				  <input type="submit" value="Update"> <input type="reset" value="Clear" id="clear_all">
+  			</form>
 			  </div> <!-- Close myBudget_input -->
 
 			  <div id="pieChart">
@@ -201,10 +201,10 @@
 				
 				<canvas id="chart"></canvas>
 				<table id="chartData">
-				  <tr>
+<!--				  <tr>
 					<th>myBudget</th> <th>Monthly ($)</th>					
 				  </tr>
-<!--				  <tr>
+				  <tr>
 					<td style="color: #0DA068">Food</td>
 				  </tr>
 				  <tr>
