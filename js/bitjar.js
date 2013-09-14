@@ -79,8 +79,9 @@ $(document).ready(function() {
 		});
 		var savings = parseInt(budget.Income) - (sum - parseInt(budget.Income));
 		console.log(savings);  
-
-	  addTableData();
+	  if (sum > 0) {
+ 	    addTableData();
+	  }
 	  if (savings > 0) {
 		chartData.append('<tr> <td>Savings</td> <td>'+savings+'</td>');
 	  }
