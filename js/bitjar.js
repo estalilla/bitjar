@@ -29,6 +29,7 @@ $(document).ready(function() {
 
 	var chartData = $('#chartData'),
 		income = {},
+		colors = ['#0DA068','#194E9C','#ED9C13','#ED5713','#057249','#5F91DC','#F88E5D','#FF4040','#E066FF','#8B8878'],
 		budget = {
 		Income : '',
 		Food : '',
@@ -48,12 +49,14 @@ $(document).ready(function() {
     function addTableData(e){
 	  chartData.html('');
 	  chartData.append('<tr> <th>myBudget</th> <th>Monthly ($)</th>  </tr>');
+	  var i = 0;
 	  $.each(budget, function(prop, value) { 
 		if(parseInt(value) > 0){
 		  console.log(prop + '='+ value);
 		  chartData.append(
-			'<tr> <td>'+prop+'</td> <td>'+value+'</td> </tr>'
-		  )			    
+			'<tr style="color:'+colors[i]+'"> <td>'+prop+'</td> <td>'+value+'</td> </tr>'
+		  )
+		  i += 1;			    
 		} 
 	});
 	};	
