@@ -1,7 +1,7 @@
 function pieChart() {
 
   // Config settings
-  var chartSizePercent = 55;                        // The chart radius relative to the canvas width/height (in percent)
+  var chartSizePercent = 40;                        // The chart radius relative to the canvas width/height (in percent)
   var sliceBorderWidth = 1;                         // Width (in pixels) of the border around each slice
   var sliceBorderStyle = "#fff";                    // Colour of the border around each slice
   var sliceGradientColour = "#ddd";                 // Colour to use for one end of the chart gradient

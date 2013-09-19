@@ -173,3 +173,37 @@ input[type="submit"] {
 	width: 50%;
 	padding-left: 4%;
 }
+
+#chartData {
+	top: 46px;
+	left: 20%;
+	border: 1px solid #333;
+    border-collapse: collapse;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+
+#chartData th, #chartData td {
+  padding: 0.5em;
+  border: 1px dotted #666;
+  text-align: left;
+}
+
+#chartData th {
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+}
+
+
+#chartData td {
+  cursor: pointer;
+}
+
+#chartData td.highlight {
+  background: #e8e8e8;
+}
+
+#chartData tr:hover td {
+  background: #f0f0f0;
+}

@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+/*Make submenus clickable on mobile
+	$("li.dropdown a").click(function(e){
+	  $(this).next('ul.dropdown-menu').css("display", "block");
+		e.stopPropagation();
+	});
+*/
+
 //FAQ accordion	
 	$('.accordion p').each(function(){
 	  $(this).hide();
@@ -81,7 +88,7 @@ $(document).ready(function() {
 		    sum += parseInt(value);
 		  }
 		});
-		var savings = parseInt(income.Income) - (sum - parseInt(income.Income));
+		var savings = parseInt(income.Income) - sum;
 		console.log(savings);  
 	  if (sum > 0) {
  	    addTableData();
