@@ -29,9 +29,9 @@ app.get('/budget', function(request, response) {
   response.send(data2);
 });
 
-// Render presentation.html (note trailing slash): example.com/
-app.get('/presentation', function(request, response) {
-  var data2 = fs.readFileSync('presentation.html').toString();
+// Render accounts.html (note trailing slash): example.com/
+app.get('/invest', function(request, response) {
+  var data2 = fs.readFileSync('invest.html').toString();
   response.send(data2);
 });
 
